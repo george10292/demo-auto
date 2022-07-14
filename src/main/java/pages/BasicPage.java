@@ -8,11 +8,11 @@ import static com.codeborne.selenide.Selenide.*;
 public class BasicPage {
 
     public void clickButton(String text) {
-        $(By.xpath("//div[text()='" + text + "']")).click();
+        $(By.xpath("//*[contains(@title, 'Grinfer - " + text + "')]")).click();
     }
 
     public void clickButtonSpan(String text) {
-        $(By.xpath("//span[text()='" + text + "']/..")).click();
+        $(By.xpath("//*[contains(@title, 'Grinfer - " + text + "')]")).click();
     }
 
     public void contentIsVisible(String text) {
